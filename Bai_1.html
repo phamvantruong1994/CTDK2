@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-right: 400px;margin-left: 300px;margin-top: 300px">
+    <fieldset>
+        <legend> Chuyen Tu OC sang OF</legend>
+        Nhap OC = <input type="text" id="OC"><br><br>
+        <input type="button" onclick="Tinh()" value="Click">
+    </fieldset>
+</form>
+<div id="res">ket qua</div>
+<script>
+    function Tinh() {
+        let res;
+        let c = parseInt(document.getElementById('OC').value);
+        let f = (9 * c) / 5 + 32;
+        document.getElementById('res').innerHTML = f;
+    }
+</script>
+</body>
+</html>

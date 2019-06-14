@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-right: 400px;margin-left: 300px;margin-top: 300px">
+    <fieldset>
+        <legend> Tinh Dien Tich Tam giac Vuong</legend>
+        Canh Ke a = <input type="text" id="a"><br><br>
+        Canh Ke b = <input type="text" id="b"><br><br>
+        <input type="button" onclick="Tinh()" value="Click">
+    </fieldset>
+</form>
+<div id="res">ket qua</div>
+<script>
+    function Tinh() {
+        let res;
+        let a = parseInt(document.getElementById('a').value);
+        let b = parseInt(document.getElementById('b').value);
+        let s = 1/2*a*b;
+        document.getElementById('res').innerHTML = s;
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-top: 40px;margin-left: 30px;margin-right: 10px">
+    <fieldset>
+        <legend>Chuyen Tu m sang feet</legend>
+        M = <input type="text" id="met"><br><br>
+        <input type="button" onclick="Doi()" value="Click">
+    </fieldset>
+</form>
+<div id="res">ket qua</div>
+<script>
+    function Doi() {
+        let res;
+        let m = parseInt(document.getElementById('met').value);
+        let ft = m*3.2808;
+        document.getElementById('res').innerHTML = ft;
+
+    }
+</script>
+</body>
+</html>

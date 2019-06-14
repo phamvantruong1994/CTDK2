@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-right: 400px;margin-left: 300px;margin-top: 300px">
+    <fieldset>
+        <legend> Giai Phuong Trinh : ax2+bx+c=0</legend>
+        Nhap a = <input type="text" id="a"><br><br>
+        Nhap b = <input type="text" id="b"><br><br>
+        Nhap c = <input type="text" id="c"><br><br>
+        <input type="button" onclick="Tinh()" value="Click">
+    </fieldset>
+</form>
+<b id="res">ket qua</b>
+<script>
+    function Tinh() {
+        let res;
+        let a = parseInt(document.getElementById('a').value);
+        let b = parseInt(document.getElementById('b').value);
+        let c = parseInt(document.getElementById('c').value);
+        let delta = b*b-4*a*c;
+        alert(Math.sqrt(delta));
+        if (delta>0){
+            res = ' phuong trinh co 2 nghiem';
+            res = -b - Math.sqrt(delta)/2*a;
+            res = -b + Math.sqrt(delta)/2*a;
+
+        }else {
+            if (delta == 0){
+                res = ' phuong trinh co nghiem kep'
+                res = -b/2*a;
+            }else {
+                res = 'phuong trinh vo nghiem';
+            }
+        }
+        document.getElementById('res').innerHTML = res;
+    }
+</script>
+</body>
+</html>
