@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-top: 300px;margin-left: 300px;margin-right: 400px">
+    <fieldset>
+        <legend>Kiem Tra Tuoi Cua 1 Nguoi</legend>
+        Nhap Tuoi = <input type="text" id="Tuoi">
+        <input type="button" onclick="Tinh()" value="KiemTra">
+    </fieldset>
+</form>
+<div id="res"></div>
+<script>
+    function Tinh() {
+        let res;
+        let tuoi = parseInt(document.getElementById('Tuoi').value);
+        if (tuoi > 0 && tuoi < 120) {
+            res = tuoi + ' ' + 'la tuoi cua mot nguoi';
+        } else {
+            res = 'khong phai la tuoi ';
+        }
+        document.getElementById('res').innerHTML = res;
+
+    }
+</script>
+</body>
+</html>

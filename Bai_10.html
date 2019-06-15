@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-right: 400px;margin-left: 300px;margin-top: 300px">
+    <fieldset>
+        <legend>Chuong Trinh Gia Dien</legend>
+        So Dien/Thang = <input type="text" id="SoDien"><br><br>
+         Gia Tien 1 So Dien = <input type="text" id="GiaTien"><br><br>
+        <input type="button" onclick="Tinh()" value="So Tien Phai Tra">
+    </fieldset>
+</form>
+<div id="res"></div>
+<script>
+    function Tinh(){
+        let res;
+        let a = parseInt(document.getElementById('SoDien').value);
+        let b = parseInt(document.getElementById('GiaTien').value);
+        let money = a * b;
+        res = money + ' ' + 'VND';
+        document.getElementById('res').innerHTML = res;
+    }
+</script>
+</body>
+</html>

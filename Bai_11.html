@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-right: 400px;margin-left: 300px;margin-top: 300px">
+    <fieldset>
+        <legend>Kiem Tra Lai Ngan Hang</legend>
+        Vay = <input type="text" id="vay"><br><br>
+        So Thang Vay = <input type="text" id="thangvay"><br><br>
+        Lai Suat % = <input type="text" id="laisuat" min="0" max="100"><br><br>
+        <input type="button" onclick="KiemTra()" value="Kiem Tra">
+    </fieldset>
+</form>
+<div id="res"></div>
+<script>
+    function KiemTra() {
+        let res;
+        let vay = parseInt(document.getElementById('vay').value);
+        let thang = parseInt(document.getElementById('thangvay').value);
+        let laisuat = parseInt(document.getElementById('laisuat').value);
+        let tienlai = vay * thang * laisuat / 100;
+        res = 'so tien lai la : ' + ' ' + tienlai;
+        document.getElementById('res').innerHTML = res;
+
+    }
+</script>
+</body>
+</html>

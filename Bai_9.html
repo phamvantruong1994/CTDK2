@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-right: 400px;margin-left: 300px;margin-top: 300px">
+    <fieldset>
+        <legend>Kiem Tra a,b,c co phai canh cua tam giac khong?</legend>
+        Nhap a = <input type="text" id="a"><br><br>
+        Nhap b = <input type="text" id="b"><br><br>
+        Nhap c = <input type="text" id="c"><br><br>
+        <input type="button" onclick="KiemTra()" value="Kiem Tra">
+    </fieldset>
+</form>
+<div id="res"></div>
+<script>
+    function KiemTra() {
+        let res;
+        let a = parseInt(document.getElementById('a').value);
+        let b = parseInt(document.getElementById('b').value);
+        let c = parseInt(document.getElementById('c').value);
+        if (a < 0 || b < 0 || c < 0) {
+            res = 'khong phai canh cua tam giac';
+        } else if ((a + b) > c && (b + c) > a && (a + c) > b) {
+            res = 'la canh cua tam giac';
+        } else {
+            res = ' khong phai canh cua tam giac';
+        }
+        document.getElementById('res').innerHTML = res;
+    }
+</script>
+</body>
+</html>
